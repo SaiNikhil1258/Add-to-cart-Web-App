@@ -13,6 +13,8 @@ const inputFieldEl = document.getElementById("input-field")
 const addButtonEl = document.getElementById("add-button")
 const shoppingListEl = document.getElementById("shopping-list")
 
+
+
 addButtonEl.addEventListener("click", function() {
     let inputValue = inputFieldEl.value
     
@@ -73,3 +75,23 @@ function appendItemToShoppingListEl(item) {
     
     shoppingListEl.append(newEl)
 }
+
+
+
+const helpButton = document.getElementById('helpButton');
+const popup = document.getElementById('popup');
+
+helpButton.addEventListener('click', (event) => {
+    event.stopPropagation();
+    popup.style.display = popup.style.display === 'block' ? 'none' : 'block';
+});
+
+// Event listener to hide the list when clicking outside the button or list
+document.addEventListener('click', (event) => {
+    const isClickInsideButton = helpButton.contains(event.target);
+    const isClickInsideList = popup.contains(event.target);
+
+    if (!isClickInsideButton && !isClickInsideList) {
+        popup.style.display = 'none';
+    }
+});
