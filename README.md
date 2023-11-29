@@ -40,6 +40,3 @@ The web app is deployed and hosted using Firebase Hosting.
 
 Contributions are welcome! If you find any bugs or want to suggest improvements, feel free to create issues or submit pull requests.
 
-## License
-
-This project is licensed under the [License Name] License - see the [LICENSE](LICENSE) file for details.
